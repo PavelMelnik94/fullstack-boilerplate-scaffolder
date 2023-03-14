@@ -1,0 +1,16 @@
+{
+	"name": "fullstack-boilerplate-scaffolder",
+	"version": "0.0.1",
+	"description": "nestjs backend and nextjs frontend minimal starter",
+	"main": "index.js",
+	"scripts": {
+		"start:server": "cd server && yarn dev",
+		"start:client": "cd client && yarn dev",
+		"start:all": "concurrently -k \"yarn run start:server\" \"yarn run start:client\""
+	},
+	"author": "Pavel Melnik",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^7.6.0"
+	}
+}
