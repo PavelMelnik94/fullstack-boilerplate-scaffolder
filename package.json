@@ -4,6 +4,7 @@
 	"description": "nestjs backend and nextjs frontend minimal starter",
 	"main": "index.js",
 	"scripts": {
+    "init": "npm i && cd server && npm i && cd ../client && npm i",
 		"start:server": "cd server && yarn dev",
 		"start:client": "cd client && yarn dev",
 		"start:all": "concurrently -k \"yarn run start:server\" \"yarn run start:client\"",
