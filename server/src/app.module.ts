@@ -7,7 +7,7 @@ import { MetaInformationModule } from './meta-information/meta-information.modul
 import { AuthMiddleware } from './user/middleware/auth.middleware';
 import { PrismaService } from './prisma.service';
 import { TodoModule } from './todo/todo.module';
-import { DevtoolsModule } from "@nestjs/devtools-integration";
+import { DevtoolsModule } from '@nestjs/devtools-integration';
 
 @Module({
   imports: [
@@ -16,8 +16,8 @@ import { DevtoolsModule } from "@nestjs/devtools-integration";
     MetaInformationModule,
     TodoModule,
     DevtoolsModule.register({
-    http: process.env.NODE_ENV !== 'production',
-  }),
+      http: process.env.NODE_ENV !== 'production',
+    }),
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],

@@ -8,6 +8,7 @@ import { TInformationResponse } from '../contracts/informationResponse.interface
 @Injectable()
 export class PostService {
   constructor(private readonly prisma: PrismaService) {}
+
   async createPost(
     createPostDto: Prisma.PostCreateInput,
     currentUser: User,

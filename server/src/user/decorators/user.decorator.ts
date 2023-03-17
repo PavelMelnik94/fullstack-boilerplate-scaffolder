@@ -7,7 +7,10 @@ export const UserInfo = createParamDecorator(
 
     if (!request.user) return null;
 
-    if (data) return request.user[data];
+    if (data) {
+      // @ts-ignore
+      return request.user[data];
+    }
 
     return request.user;
   },

@@ -33,6 +33,8 @@ export class AuthMiddleware implements NestMiddleware {
 
       const user = await this.prisma.user.findFirst({
         where: {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
           id: decoded.id,
         },
       });
