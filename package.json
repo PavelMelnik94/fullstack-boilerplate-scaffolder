@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
     "init": "npm i && cd server && npm i && cd ../client && npm i",
+    "db:deploy": "cd server && npm run db:deploy",
 		"start:server": "cd server && yarn dev",
 		"start:client": "cd client && yarn dev",
 		"start:all": "concurrently -k \"yarn run start:server\" \"yarn run start:client\"",
